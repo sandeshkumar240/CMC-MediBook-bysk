@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Consultation</title>
+    <!-- link -->
+    <link rel="icon" type="image/x-icon" href="../CMC MEDIBOOK.png">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../assests/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assests/bootstrap/js/bootstrap.bundle.js">
+    <script src="../assests/jquery/jquery-3.7.1.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
+
+</head>
+<body>
+    <!-- navbar start -->
+     <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+        <div class="container-fluid">
+          <!-- <a class="navbar-brand" href="">PASCAL JEWELS </span></a> -->
+           <img src="./CMC MEDIBOOK.png" class="navbar-brand" style="width: 120px; height: 100px;" alt="">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                 Patient Walefare
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="./patient walefare/Welfare-support.html">Welfare-Support</a></li>
+                  <li><a class="dropdown-item" href="./patient walefare/zaqat.html">Zaqat Support</a></li>
+                  <li><a class="dropdown-item" href="./patient walefare/how-to-apply.html">How to Apply</a></li>
+                </ul>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                 Specialists
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="./dropdown/ortho.html">Department of Orthopedic Surgery</a></li>
+                  <li><a class="dropdown-item" href="./dropdown/Cardiologist.html">Department of Cardiologist</a></li>
+                  <li><a class="dropdown-item" href="./dropdown/Urologist.html">Department of Urologist</a></li>
+                </ul>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link " href="./videochat.html" tabindex="-1" aria-disabled="true">Video Consultation</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " href="./about us.html" tabindex="-1" aria-disabled="true">About Us </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " href="./feedback.html" tabindex="-1" aria-disabled="true">Feedback</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " href="./contact us.html" tabindex="-1" aria-disabled="true">Contact us</a>
+              </li>
+            </ul>
+            <form class="d-flex">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      <!-- navbar end -->
+
+<center class="mt-4"><h1><b>UROLOGIST</b></h1></center>
+
+<div class="container mt-4">
+  <div class="row">
+
+    <!-- DOCTOR 1 -->
+    <div class="col-md-3 mb-3">
+      <div class="card">
+        <img src="./assests/images/video consultation/Ali Raza.jpg" style="height:300px;" alt="">
+        <div class="card-body text-center">
+          <p><b>Dr. Mahammad Ajmal</b></p>
+          <p>PKR 3000</p>
+          <button class="btn btn-success"
+          onclick="selectDoctor('Dr.Ali Raza','Cardiologist',3000,'Video Consultation')">
+          Book Now
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- DOCTOR 2 -->
+    <div class="col-md-3 mb-3">
+      <div class="card">
+        <img src="./assests/images/video consultation/Fazal khan niazi.png" style="height:300px;" alt="">
+        <div class="card-body text-center">
+          <p><b>Dr. Habib-ur-Rahman</b></p>
+          <p>PKR 3000</p>
+          <button class="btn btn-success"
+          onclick="selectDoctor('Dr.Fazal khan niazi','Cardiologist',3000,'Video Consultation')">
+          Book Now
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- DOCTOR 3 -->
+    <div class="col-md-3 mb-3">
+      <div class="card">
+        <img src="./assests/images/video consultation/Dr.-Muhammad-Saleem-Akhtar.jpg" style="height:300px;" alt="">
+        <div class="card-body text-center">
+          <p><b>Dr. Mahammad Sarwar</b></p>
+          <p>PKR 3000</p>
+          <button class="btn btn-success"
+          onclick="selectDoctor('Dr.Muhammad-Saleem-Akhtar','Cardiologist',3000,'Video Consultation')">
+          Book Now
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- DOCTOR 4 -->
+    <div class="col-md-3 mb-3">
+      <div class="card">
+        <img src="./assests/images/video consultation/Zubair Cheema.webp" style="height:300px;" alt="">
+        <div class="card-body text-center">
+          <p><b>Dr. Abdul Baqi</b></p>
+          <p>PKR 3000</p>
+          <button class="btn btn-success"
+          onclick="selectDoctor('Dr.Zubair Cheema','Cardiologist',3000,'Video Consultation')">
+          Book Now
+          </button>
+        </div>
+      </div>
+    </div>
+<br><br>
+    <center class="mt-4"><h1><b>CARDIOLOGIST</b></h1></center><br>
+    <!-- DOCTOR 5 -->
+    <div class="col-md-3 mb-4">
+      <div class="card">
+        <img src="./assests/images/video consultation/Dr. Fraz Ahmad cardio.webp" style="height:300px;" alt="">
+        <div class="card-body text-center">
+          <p><b>Dr. Bella Khan</b></p>
+          <p>PKR 3000</p>
+          <button class="btn btn-success"
+          onclick="selectDoctor('Dr.Fraz Ahmad cardio','Cardiologist',3000,'Video Consultation')">
+          Book Now
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- DOCTOR 6 -->
+    <div class="col-md-3 mb-4">
+      <div class="card">
+        <img src="./assests/images/video consultation/dr.shahryar ahmad Cardio.jpg" style="height:300px;" alt="">
+        <div class="card-body text-center">
+          <p><b>Dr. Osman Faheem</b></p>
+          <p>PKR 3000</p>
+          <button class="btn btn-success"
+          onclick="selectDoctor('Dr.shahryar ahmad','Cardiologist',3000,'Video Consultation')">
+          Book Now
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- DOCTOR 7 -->
+    <div class="col-md-3 mb-4">
+      <div class="card">
+        <img src="./assests/images/video consultation/Muhammad Sarwar Cardio.jfif" style="height:300px;" alt="">
+        <div class="card-body text-center">
+          <p><b>Dr.Hafeez Ahmed</b></p>
+          <p>PKR 3000</p>
+          <button class="btn btn-success"
+          onclick="selectDoctor('Dr.Sarwar Cardio','Cardiologist',3000,'Video Consultation')">
+          Book Now
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- DOCTOR 8 -->
+    <div class="col-md-3 mb-4">
+      <div class="card">
+        <img src="./assests/images/video consultation/Nauman Khalid Cardio.jfif" style="height:300px;" alt="">
+        <div class="card-body text-center">
+          <p><b>Dr.Abeer Sarfaraz</b></p>
+          <p>PKR 3000</p>
+          <button class="btn btn-success"
+          onclick="selectDoctor('Dr.Nauman Khalid Cardio','Cardiologist',3000,'Video Consultation')">
+          Book Now
+          </button>
+        </div>
+      </div>
+    </div>
+<br><br>
+    <center class="mt-4"><h1><b>ORTHOPEDIC SURGEON</b></h1></center><br>
+
+    <!-- DOCTOR 9 -->
+    <div class="col-md-3 mb-4">
+      <div class="card">
+        <img src="./assests/images/video consultation/Khalid Hussain ortho.jpg" style="height:300px;" alt="">
+        <div class="card-body text-center">
+          <p><b>Dr.Ifrah Uroos</b></p>
+          <p>PKR 3000</p>
+          <button class="btn btn-success"
+          onclick="selectDoctor('Dr.Khalid Hussain','Cardiologist',3000,'Video Consultation')">
+          Book Now
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- DOCTOR 10 -->
+    <div class="col-md-3 mb-4">
+      <div class="card">
+        <img src="./assests/images/video consultation/Dr. SHOAIB FAROOQ MUGHAL ortho.jpeg" style="height:300px;" alt="">
+        <div class="card-body text-center">
+          <p><b>Dr.Ifrah Uroos</b></p>
+          <p>PKR 3000</p>
+          <button class="btn btn-success"
+          onclick="selectDoctor('Dr.SHOAIB FAROOQ MUGHAL','Cardiologist',3000,'Video Consultation')">
+          Book Now
+          </button>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- DOCTOR 11 -->
+    <div class="col-md-3 mb-4">
+      <div class="card">
+        <img src="./assests/images/video consultation/Mansoor Ali Khan ortho dr.jfif" style="height:300px;" alt="">
+        <div class="card-body text-center">
+          <p><b>Dr.Ifrah Uroos</b></p>
+          <p>PKR 3000</p>
+          <button class="btn btn-success"
+          onclick="selectDoctor('Dr.Mansoor Ali Khan','Cardiologist',3000,'Video Consultation')">
+          Book Now
+          </button>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- DOCTOR 12 -->
+    <div class="col-md-3 mb-4">
+      <div class="card">
+        <img src="./assests/images/video consultation/Pervaiz Hashmi ortho dr.jfif" style="height:300px;" alt="">
+        <div class="card-body text-center">
+          <p><b>Dr.Ifrah Uroos</b></p>
+          <p>PKR 3000</p>
+          <button class="btn btn-success"
+          onclick="selectDoctor('Dr.Pervaiz Hashmi','Cardiologist',3000,'Video Consultation')">
+          Book Now
+          </button>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+</div>
+
+<!-- SCRIPT -->
+<script src="../assests/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+<script>
+function selectDoctor(name, specialty, fee, type) {
+    localStorage.setItem("doctorName", name);
+    localStorage.setItem("specialty", specialty);
+    localStorage.setItem("fee", fee);
+    localStorage.setItem("appointmentType", type);
+
+    window.location.href = "../checkout.html";
+}
+</script>
+
+
+        <!-- footer start -->
+   <section class="footer" style="margin-top: 400px;">
+    <div class="container-fluid">
+    <div class="footer-row">
+      <div class="footer-col">
+        <h4>Info</h4>
+        <ul class="links">
+          <li><a href="#"> home</a></li>
+          <li><a href="./Medical Specialists.html">Specilazation</a></li>
+          <li><a href="#">items</a></li>
+          <li><a href="./contact us.html">contact us</a></li>
+          <li><a href="./About us.html">about us</a></li>
+          <li><a href="./feedback.html">Feedback</a></li>
+          <li><a href="./gallery.html">Video Chat</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Specialists</h4>
+        <ul class="links">
+          <li><a href="#">ENT</a></li>
+          <li><a href="#">UROLOGIST</a></li>
+          <li><a href="#">CARDIOLOGIST</a></li>
+          <li><a href="#">GERNAL PHYSICIAN</a></li>
+          <li><a href="#">NEOROLOGIST</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>get In Touch</h4>
+        <ul class="links">
+          <li><a href="#"><i class=" fa fa-phone" aria-hidden="true"></i>0336-7303220</a></li>
+          <li><a href="#">Email:</a></li>
+          <li><a href="#">sandesh.tharani757@gmail.com</a></li>
+         
+        </ul>
+      </div>
+      <div class="footer-col">
+   
+        <form action="#">
+          <input type="text" placeholder="Search" required>
+          <button type="submit">search</button>
+        </form>
+     
+      </div>
+    </div>
+  </div>
+  <p class="Rights-Reserved">©CMC MEDIBOOK. All Rights Reserved till Dec 2026.</p>
+  </section>
+<!-- footer end -->
+
+</body>
+</html>

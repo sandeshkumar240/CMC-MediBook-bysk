@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apply for Walefare</title>
+    <!-- links -->
+    <link rel="icon" type="image/x-icon" href="../CMC MEDIBOOK.png">
+    <link rel="stylesheet" href="../assests/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
+    <script src="../assests/bootstrap/js/bootstrap.bundle.js"></script>
+    <script src="../assests/jquery/jquery-3.7.1.min.js"></script>
+  <style>
+    /* zaqat page */
+
+.zakat-container {
+    max-width: 500px;
+    margin: auto;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 6px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+}
+
+.zakat-container h2 {
+    text-align: center;
+    color: #0f2f44;
+}
+
+.zakat-note {
+    font-size: 13px;
+    text-align: center;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 6px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.radio-group {
+    display: flex;
+    gap: 15px;
+}
+
+.submit-btn {
+    width: 100%;
+    background: #16a085;
+    color: #fff;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.submit-btn:hover {
+    background: #13856d;
+}
+
+.message {
+    margin-top: 15px;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    display: none;
+    font-weight: bold;
+}
+
+.success {
+    background: #d4edda;
+    color: #155724;
+}
+
+.error {
+    background: #f8d7da;
+    color: #721c24;
+}
+  </style>
+</head>
+<body>
+        <!-- navbar start -->
+     <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+        <div class="container-fluid">
+          <!-- <a class="navbar-brand" href="">PASCAL JEWELS </span></a> -->
+           <img src="../CMC MEDIBOOK.png" class="navbar-brand" style="width: 120px; height: 100px;" alt="">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="../index.html">Home</a>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                 Patient Walefare
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="../patient walefare/Welfare-support.html">Welfare-Support</a></li>
+                  <li><a class="dropdown-item" href="../patient walefare/zaqat.html">Zaqat Support</a></li>
+                  <li><a class="dropdown-item" href="../patient walefare/how-to-apply.html">How to Apply</a></li>
+                </ul>
+              </li>
+
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                 Specialists
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="../dropdown/ortho.html">Department of Orthopedic Surgery</a></li>
+                  <li><a class="dropdown-item" href="../dropdown/Cardiologist.html">Department of Cardiologist</a></li>
+                  <li><a class="dropdown-item" href="../dropdown/Urologist.html">Department of Urologist</a></li>
+                </ul>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link " href="../videochat.html" tabindex="-1" aria-disabled="true">Video Chat</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " href="../about us.html" tabindex="-1" aria-disabled="true">About Us </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " href="../feedback.html" tabindex="-1" aria-disabled="true">Feedback</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " href="../contact us.html" tabindex="-1" aria-disabled="true">Contact us</a>
+              </li>
+            </ul>
+            <form class="d-flex">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      <!-- navbar end -->
+
+<div class="zakat-container">
+    <h2>Zakat Support Application</h2>
+    <p class="zakat-note">
+        Please provide correct information. All applications are verified before approval.
+    </p>
+
+    <form id="zakatForm">
+
+        <div class="form-group">
+            <label>Full Name</label>
+            <input type="text" id="fullName" placeholder="Enter full name" required>
+        </div>
+
+        <div class="form-group">
+            <label>CNIC Number</label>
+            <input type="text"
+                   id="cnic"
+                   placeholder="13 digit CNIC (without dashes)"
+                   maxlength="13"
+                   minlength="13"
+                   pattern="[0-9]{13}"
+                   required>
+        </div>
+
+        <div class="form-group">
+            <label>Gender</label>
+            <div class="radio-group">
+                <label><input type="radio" name="gender" value="Male" required> Male</label>
+                <label><input type="radio" name="gender" value="Female"> Female</label>
+                <label><input type="radio" name="gender" value="Other"> Other</label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label>Monthly Salary (PKR)</label>
+            <input type="number" id="salary" placeholder="e.g. 25000" required>
+        </div>
+
+        <div class="form-group">
+            <label>Address</label>
+            <textarea id="address" rows="3" placeholder="Complete residential address" required></textarea>
+        </div>
+
+        <button type="submit" class="submit-btn">
+            Submit Zakat Application
+        </button>
+
+    </form>
+
+    <div id="formMessage" class="message"></div>
+</div>
+
+<script>
+document.getElementById("zakatForm").addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const salary = Number(document.getElementById("salary").value);
+    const messageBox = document.getElementById("formMessage");
+
+    if (salary > 100000) {
+        messageBox.textContent =
+            "You are NOT eligible for Zakat support because your monthly salary exceeds PKR 100,000.";
+        messageBox.className = "message error";
+        messageBox.style.display = "block";
+        return;
+    }
+
+    messageBox.textContent =
+        "Your Zakat application has been submitted successfully. Our team will review your request.";
+    messageBox.className = "message success";
+    messageBox.style.display = "block";
+
+    // Optional: save eligibility for later use
+    localStorage.setItem("zakatStatus", "Eligible");
+
+    this.reset();
+});
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=">
+    <title>Feedback</title>
+    <link rel="stylesheet" href="./assests/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+
+    <link rel="icon" type="image/x-icon" href="./CMC MEDIBOOK.png">
+
+
+<style>
+    body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;}
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+.star-rating {
+            direction: rtl;
+            display: inline-block;
+        }
+
+        .star {
+            font-size: 30px;
+            color: lightgray;
+            cursor: pointer;
+        }
+
+        input[type="radio"] {
+            display: none;
+        }
+
+        input[type="radio"]:checked ~ .star {
+            color: gold;
+        }
+
+        input[type="radio"]:hover ~ .star {
+            color: gold;
+        }
+</style>
+</head>
+<body>
+    <script src="../jquery/jquery-3.7.1.min.js"></script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CMC MediBook</title>
+    <!-- links -->
+    <link rel="icon" type="image/x-icon" href="./CMC MEDIBOOK.png">
+    <link rel="stylesheet" href="./assests/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
+    <script src="./assests/bootstrap/js/bootstrap.bundle.js"></script>
+</head>
+<body>
+    <!-- navbar start -->
+     <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+        <div class="container-fluid">
+          <!-- <a class="navbar-brand" href="">PASCAL JEWELS </span></a> -->
+           <img src="./CMC MEDIBOOK.png" class="navbar-brand" style="width: 120px; height: 100px;" alt="">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                 Patient Walefare
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="./patient walefare/Welfare-support.html">Welfare-Support</a></li>
+                  <li><a class="dropdown-item" href="./patient walefare/zaqat.html">Zaqat Support</a></li>
+                  <li><a class="dropdown-item" href="./patient walefare/how-to-apply.html">How to Apply</a></li>
+                </ul>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                 Specialists
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="./dropdown/ortho.html">Department of Orthopedic Surgery</a></li>
+                  <li><a class="dropdown-item" href="./dropdown/Cardiologist.html">Department of Cardiologist</a></li>
+                  <li><a class="dropdown-item" href="./dropdown/Urologist.html">Department of Urologist</a></li>
+                </ul>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link " href="./videochat.html" tabindex="-1" aria-disabled="true">Video Consultation</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " href="./about us.html" tabindex="-1" aria-disabled="true">About Us </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " href="./feedback.html" tabindex="-1" aria-disabled="true">Feedback</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " href="./contact us.html" tabindex="-1" aria-disabled="true">Contact us</a>
+              </li>
+            </ul>
+            <form class="d-flex">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      <!-- navbar end -->
+
+ <!-- Feedback -->
+ <div class="container" >
+    <h2> <b>Feedback</b></h2>
+   <p> Reach out to us by filling in the details below and we'll revert soon </p>
+   <center><div class="star-rating">
+       
+
+    <form action="https://api.web3forms.com/submit" method="POST">
+
+        <!-- Replace with your Access Key -->
+        <input type="hidden" name="access_key" value="aa830f9f-8bef-4949-b8a5-9a853e539826">
+
+    <input type="radio" id="star1" name="rating" value="5" />
+    <label for="star1" class="star">★</label>
+    <input type="radio" id="star2" name="rating" value="4" />
+    <label for="star2" class="star">★</label>
+    <input type="radio" id="star3" name="rating" value="3" />
+    <label for="star3" class="star">★</label>
+    <input type="radio" id="star4" name="rating" value="2" />
+    <label for="star4" class="star">★</label>
+    <input type="radio" id="star5" name="rating" value="1" />
+    <label for="star5" class="star">★</label>
+</div>
+</center>
+    <form action="/action_page.php">
+      <label for="fname">First Name</label>
+      <input type="text" id="fname" name="firstname" placeholder="Your name..">
+  
+      <label for="lname">Last Name</label>
+      <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+  
+      <label for="country">Country</label>
+      <select id="country" name="country">
+        <option value="australia">Australia</option>
+        <option value="canada">Canada</option>
+        <option value="usa">USA</option>
+        <option value="usa">indonessia</option>
+        <option value="usa">canada</option>
+        <option value="usa">pakistan</option>
+      </select>
+  
+      <label for="subject">Subject</label>
+      <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+  
+      <input type="submit" value="Submit" class="submit">
+    </form>
+  </div>
+
+  <!-- Feedback -->
+   <!-- <script>
+    $(document).ready(function(){
+        $(".submit").click(function(){
+            alert("Your feedback has been submitted successfully")
+        })
+    })
+   </script> -->
+
+        <!-- footer start -->
+    
+   <section class="footer" style="margin-top: 400px;">
+    <div class="container-fluid">
+    <div class="footer-row">
+      <div class="footer-col">
+        <h4>Info</h4>
+        <ul class="links">
+          <li><a href="#"> home</a></li>
+          <li><a href="./Medical Specialists.html">Specilazation</a></li>
+          <li><a href="#">items</a></li>
+          <li><a href="./contact us.html">contact us</a></li>
+          <li><a href="./About us.html">about us</a></li>
+          <li><a href="./feedback.html">Feedback</a></li>
+          <li><a href="./gallery.html">Video Chat</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Specialists</h4>
+        <ul class="links">
+          <li><a href="#">ENT</a></li>
+          <li><a href="#">UROLOGIST</a></li>
+          <li><a href="#">CARDIOLOGIST</a></li>
+          <li><a href="#">GERNAL PHYSICIAN</a></li>
+          <li><a href="#">NEOROLOGIST</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>get In Touch</h4>
+        <ul class="links">
+          <li><a href="#"><i class=" fa fa-phone" aria-hidden="true"></i>0336-7303220</a></li>
+          <li><a href="#">Email:</a></li>
+          <li><a href="#">sandesh.tharani757@gmail.com</a></li>
+         
+        </ul>
+      </div>
+      <div class="footer-col">
+   
+        <form action="#">
+          <input type="text" placeholder="Search" required>
+          <button type="submit">search</button>
+        </form>
+     
+      </div>
+    </div>
+  </div>
+  <p class="Rights-Reserved">©CMC MEDIBOOK. All Rights Reserved till Dec 2026.</p>
+  </section>
+<!-- footer end -->
+</body>
+</html>

@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Appointment Checkout | CMC MediBook</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- links -->
+    <link rel="icon" type="image/x-icon" href="./CMC MEDIBOOK.png">
+    <link rel="stylesheet" href="./assests/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
+    <script src="./assests/bootstrap/js/bootstrap.bundle.js"></script>
+
+<style>
+* {
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #f4f6f7;
+    padding: 20px;
+}
+
+.checkout-container {
+    max-width: 500px;
+    margin: auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 6px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+}
+
+h2, h3 {
+    text-align: center;
+    color: #e31b23;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+input[readonly] {
+    background: #f1f1f1;
+}
+
+.radio-group {
+    display: flex;
+    gap: 15px;
+}
+
+.submit-btn {
+    width: 100%;
+    background: #16a085;
+    color: #fff;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* SUMMARY */
+.summary {
+    display: none;
+    margin-top: 20px;
+    background: #f9f9f9;
+    padding: 15px;
+    border-radius: 6px;
+    border-left: 5px solid #16a085;
+}
+
+.summary p {
+    margin: 8px 0;
+}
+
+.note {
+    margin-top: 10px;
+    padding: 10px;
+    background: #d4edda;
+    border-left: 5px solid #28a745;
+    font-weight: bold;
+    text-align: center;
+}
+
+.time {
+    font-size: 13px;
+    color: #555;
+}
+</style>
+</head>
+
+<body>
+
+        <!-- navbar start -->
+     <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+        <div class="container-fluid">
+          <!-- <a class="navbar-brand" href="">PASCAL JEWELS </span></a> -->
+           <img src="./CMC MEDIBOOK.png" class="navbar-brand" style="width: 120px; height: 100px;" alt="">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                 Patient Walefare
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="./patient walefare/Welfare-support.html">Welfare-Support</a></li>
+                  <li><a class="dropdown-item" href="./patient walefare/zaqat.html">Zaqat Support</a></li>
+                  <li><a class="dropdown-item" href="./patient walefare/how-to-apply.html">How to Apply</a></li>
+                </ul>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                 Specialists
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="./dropdown/ortho.html">Department of Orthopedic Surgery</a></li>
+                  <li><a class="dropdown-item" href="./dropdown/Cardiologist.html">Department of Cardiologist</a></li>
+                  <li><a class="dropdown-item" href="./dropdown/Urologist.html">Department of Urologist</a></li>
+                </ul>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link " href="./videochat.html" tabindex="-1" aria-disabled="true">Video Consultation</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " href="./about us.html" tabindex="-1" aria-disabled="true">About Us </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " href="./feedback.html" tabindex="-1" aria-disabled="true">Feedback</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " href="./contact us.html" tabindex="-1" aria-disabled="true">Contact us</a>
+              </li>
+            </ul>
+            <form class="d-flex">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      <!-- navbar end -->
+
+      <!-- div start -->
+<div class="checkout-container">
+    <h2>Patient Checkout</h2>
+
+    <!-- DOCTOR DETAILS -->
+    <div class="form-group">
+        <label>Doctor Name</label>
+        <input type="text" id="doctorName" readonly>
+    </div>
+
+    <div class="form-group">
+        <label>Specialty</label>
+        <input type="text" id="doctorSpecialty" readonly>
+    </div>
+
+    <div class="form-group">
+        <label>Appointment Type</label>
+        <input type="text" id="appointmentType" readonly>
+    </div>
+
+    <div class="form-group">
+        <label>Consultation Fee</label>
+        <input type="text" id="doctorFee" readonly>
+    </div>
+
+    <form id="checkoutForm">
+
+        <div class="form-group">
+            <label>Patient Name</label>
+            <input type="text" id="name" required>
+        </div>
+
+        <div class="form-group">
+            <label>CNIC Number</label>
+            <input type="text"
+                   id="cnic"
+                   placeholder="13 digit CNIC (without dashes)"
+                   maxlength="13"
+                   minlength="13"
+                   pattern="[0-9]{13}"
+                   required>
+        </div>
+
+        <div class="form-group">
+            <label>Age</label>
+            <input type="number" id="age" min="1" max="120" required>
+        </div>
+
+        <div class="form-group">
+            <label>Gender</label>
+            <div class="radio-group">
+                <label><input type="radio" name="gender" value="Male" required> Male</label>
+                <label><input type="radio" name="gender" value="Female"> Female</label>
+                <label><input type="radio" name="gender" value="Other"> Other</label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label>Contact Number</label>
+            <input type="tel" required>
+        </div>
+
+        <div class="form-group">
+            <label>Appointment Date</label>
+            <input type="date" id="date" required>
+        </div>
+
+        <h5>Select Payment Method</h5>
+
+        <div>
+            <input type="radio" name="payment" value="Cash" required>
+            <label>Cash Payment</label>
+        </div>
+
+        <div>
+            <input type="radio" name="payment" id="card">
+            <label>Card Payment</label>
+        </div>
+
+        <button type="submit" class="submit-btn">
+            Confirm Appointment
+        </button>
+    </form>
+
+    <!-- SUMMARY -->
+    <div class="summary" id="summaryBox">
+        <h3>Appointment Summary</h3>
+
+        <p><strong>Doctor:</strong> <span id="sDoctor"></span></p>
+        <p><strong>Specialty:</strong> <span id="sSpecialty"></span></p>
+        <p><strong>Appointment Type:</strong> <span id="sAppointmentType"></span></p>
+        <p><strong>Fee:</strong> <span id="sFee"></span></p>
+
+        <p><strong>Patient:</strong> <span id="sName"></span></p>
+        <p><strong>Age:</strong> <span id="sAge"></span></p>
+        <p><strong>Gender:</strong> <span id="sGender"></span></p>
+        <p><strong>Date:</strong> <span id="sDate"></span></p>
+        <p><strong>Payment:</strong> <span id="sPayment"></span></p>
+
+        <div class="note">
+            APPOINTMENT BOOKED SUCCESSFULLY. PLEASE BE ON TIME
+        </div>
+
+        <p class="time">
+            <strong>Booked At:</strong> <span id="sTime"></span>
+        </p>
+    </div>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    const doctor = localStorage.getItem("doctorName");
+    const specialty = localStorage.getItem("specialty");
+    const fee = localStorage.getItem("fee");
+    const appointmentType = localStorage.getItem("appointmentType");
+
+    document.getElementById("doctorName").value = doctor || "Not Selected";
+    document.getElementById("doctorSpecialty").value = specialty || "-";
+    document.getElementById("doctorFee").value = fee ? "PKR " + fee : "-";
+    document.getElementById("appointmentType").value =
+        appointmentType || "Physical Appointment";
+
+    document.getElementById("card").addEventListener("click", function () {
+        alert("Card payment is currently unavailable.");
+        this.checked = false;
+    });
+
+    document.getElementById("checkoutForm").addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        document.getElementById("sDoctor").textContent = doctor || "-";
+        document.getElementById("sSpecialty").textContent = specialty || "-";
+        document.getElementById("sFee").textContent = fee ? "PKR " + fee : "-";
+        document.getElementById("sAppointmentType").textContent =
+            appointmentType || "Physical Appointment";
+
+        document.getElementById("sName").textContent =
+            document.getElementById("name").value;
+
+        document.getElementById("sAge").textContent =
+            document.getElementById("age").value;
+
+        document.getElementById("sGender").textContent =
+            document.querySelector('input[name="gender"]:checked').value;
+
+        document.getElementById("sDate").textContent =
+            document.getElementById("date").value;
+
+        document.getElementById("sPayment").textContent =
+            document.querySelector('input[name="payment"]:checked').value;
+
+        document.getElementById("sTime").textContent =
+            new Date().toLocaleString();
+
+        document.getElementById("summaryBox").style.display = "block";
+
+        localStorage.removeItem("doctorName");
+        localStorage.removeItem("specialty");
+        localStorage.removeItem("fee");
+        localStorage.removeItem("appointmentType");
+    });
+
+});
+</script>
+
+</body>
+</html>

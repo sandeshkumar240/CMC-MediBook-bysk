@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact us</title>
+        <!-- links -->
+    <link rel="icon" type="image/x-icon" href="./CMC MEDIBOOK.png">
+    <link rel="stylesheet" href="./assests/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assests/bootstrap/js/bootstrap.bundle.js">
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+</head>
+<body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CMC MediBook</title>
+    <!-- links -->
+    <link rel="icon" type="image/x-icon" href="./CMC MEDIBOOK.png">
+    <link rel="stylesheet" href="./assests/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
+    <script src="./assests/bootstrap/js/bootstrap.bundle.js"></script>
+</head>
+<body>
+    <!-- navbar start -->
+     <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+        <div class="container-fluid">
+          <!-- <a class="navbar-brand" href="">PASCAL JEWELS </span></a> -->
+           <img src="./CMC MEDIBOOK.png" class="navbar-brand" style="width: 120px; height: 100px;" alt="">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                 Patient Walefare
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="./patient walefare/Welfare-support.html">Welfare-Support</a></li>
+                  <li><a class="dropdown-item" href="./patient walefare/zaqat.html">Zaqat Support</a></li>
+                  <li><a class="dropdown-item" href="./patient walefare/how-to-apply.html">How to Apply</a></li>
+                </ul>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                 Specialists
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="./dropdown/ortho.html">Department of Orthopedic Surgery</a></li>
+                  <li><a class="dropdown-item" href="./dropdown/Cardiologist.html">Department of Cardiologist</a></li>
+                  <li><a class="dropdown-item" href="./dropdown/Urologist.html">Department of Urologist</a></li>
+                </ul>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link " href="./videochat.html" tabindex="-1" aria-disabled="true">Video Consultation</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " href="./about us.html" tabindex="-1" aria-disabled="true">About Us </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " href="./feedback.html" tabindex="-1" aria-disabled="true">Feedback</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " href="./contact us.html" tabindex="-1" aria-disabled="true">Contact us</a>
+              </li>
+            </ul>
+            <form class="d-flex">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      <!-- navbar end -->
+       
+      <!-- div start -->
+    <div id="Contact" class="contact-container">
+        <h2>GET IN TOUCH</h2>
+        <P>Reach out to us by filling in the details below and we'll revert soon</P>
+        <form action="https://api.web3forms.com/submit" method="POST">
+
+          <input type="hidden" name="access_key" value="aa830f9f-8bef-4949-b8a5-9a853e539826">
+
+
+            <input type="text" id="name" placeholder="Enter Your Name" name="name" required>
+
+            <input type="email" id="email" placeholder="Enter Your Email" name="email" required>
+
+            <input type="number" id="name" placeholder="Phone" name="name" required>
+
+            <textarea id="message" name="message" placeholder="Message" rows="3" required></textarea>
+            <input type="hidden" name="redirect" value="https://web3forms.com/success">
+
+            <button type="submit" class="btnform">Submit</button>
+        </form>
+        <p id="responseMessage"></p>
+        <div id="successAlert" class="alert alert-success d-none" role="alert">
+            Your message has been sent successfully!
+        </div>
+    </div>
+    <script src="./assests/jquery/jquery-3.7.1.min.js"></script>
+    <script>
+        function handleSubmit(event) {
+            event.preventDefault(); // Prevent the default form submission
+
+            // Simulate a successful submission (you can add your AJAX call here)
+            document.getElementById('successAlert').classList.remove('d-none'); // Show the success alert
+
+            // Optionally, you can reset the form
+            document.getElementById('contactForm').reset();
+
+            // Hide the alert after a few seconds (optional)
+            setTimeout(() => {
+                document.getElementById('successAlert').classList.add('d-none');
+            }, 3000); // Hide after 3 seconds
+
+            return false; // Prevent form submission
+        }
+    </script>
+
+
+
+        <!-- footer start -->
+    
+   <section class="footer" style="margin-top: 400px;">
+    <div class="container-fluid">
+    <div class="footer-row">
+      <div class="footer-col">
+        <h4>Info</h4>
+        <ul class="links">
+          <li><a href="#"> home</a></li>
+          <li><a href="./Medical Specialists.html">Specilazation</a></li>
+          <li><a href="#">items</a></li>
+          <li><a href="./contact us.html">contact us</a></li>
+          <li><a href="./About us.html">about us</a></li>
+          <li><a href="./feedback.html">Feedback</a></li>
+          <li><a href="./gallery.html">Video Chat</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Specialists</h4>
+        <ul class="links">
+          <li><a href="#">ENT</a></li>
+          <li><a href="#">UROLOGIST</a></li>
+          <li><a href="#">CARDIOLOGIST</a></li>
+          <li><a href="#">GERNAL PHYSICIAN</a></li>
+          <li><a href="#">NEOROLOGIST</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>get In Touch</h4>
+        <ul class="links">
+          <li><a href="#"><i class=" fa fa-phone" aria-hidden="true"></i>0336-7303220</a></li>
+          <li><a href="#">Email:</a></li>
+          <li><a href="#">sandesh.tharani757@gmail.com</a></li>
+         
+        </ul>
+      </div>
+      <div class="footer-col">
+   
+        <form action="#">
+          <input type="text" placeholder="Search" required>
+          <button type="submit">search</button>
+        </form>
+     
+      </div>
+    </div>
+  </div>
+     <p class="Rights-Reserved">©CMC MEDIBOOK. All Rights Reserved till Dec 2026.</p>
+  </section>
+<!-- footer end -->
+</body>
+</html>
